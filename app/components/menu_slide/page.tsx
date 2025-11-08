@@ -27,7 +27,7 @@ export default function MenuBar() {
         </Link>
         
         <Link 
-          href="/shelf" 
+          href="/my-shelf" 
           className="flex items-center gap-3 text-gray-800 hover:text-orange-500 transition-colors"
         >
           <Library className="w-6 h-6" />
