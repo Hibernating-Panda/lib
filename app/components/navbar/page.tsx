@@ -2,6 +2,7 @@
 
 import { Search, Clock, Calendar, ChevronDown, User } from "lucide-react";
 import { useState, useEffect } from "react";
+import Link from "next/link"; // Import the Link component
 // import Image from "next/image";
 
 export default function Navbar() {
@@ -73,14 +74,16 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* User Profile */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 px-4 py-2 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden flex items-center justify-center">
-            <User className="w-6 h-6 text-gray-600" />
+        {/* User Profile - WRAPPED IN LINK */}
+        <Link href="/profile">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 px-4 py-2 flex items-center gap-3 hover:bg-gray-50 transition-colors cursor-pointer">
+            <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden flex items-center justify-center">
+              <User className="w-6 h-6 text-gray-600" />
+            </div>
+            <span className="text-gray-700 font-medium">Kenson</span>
+            <ChevronDown className="w-4 h-4 text-gray-500" />
           </div>
-          <span className="text-gray-700 font-medium">Kenson</span>
-          <ChevronDown className="w-4 h-4 text-gray-500" />
-        </div>
+        </Link>
       </div>
     </div>
   );
